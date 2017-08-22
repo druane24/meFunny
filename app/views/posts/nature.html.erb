@@ -1,2 +1,28 @@
-<h1>Posts#nature</h1>
-<p>Find me in app/views/posts/nature.html.erb</p>
+<body style="background-color:darkgrey;"">
+  <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded" style="background-color: #e3f2fd;">
+    <%= link_to image_tag("logo.png",size: "100x100"), posts_all_path, class: "navbar-brand"  %> 
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon ic-4x"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <%= link_to "All", posts_all_path, class: "nav-item nav-link", id: "header" %>
+        <%= link_to "Funny", posts_funny_path, class: "nav-item nav-link", id: "header" %>
+        <%= link_to "Awww", posts_awww_path, class: "nav-item nav-link" , id: "header"%>
+        <%= link_to "Satisfying", posts_satisfying_path, class: "nav-item nav-link" , id: "header"%>
+        <%= link_to "Knowledge", posts_knowledge_path, class: "nav-item nav-link", id: "header" %>
+        <%= link_to "Nature", posts_nature_path, class: "nav-item nav-link active", id: "header" %>
+        <%= link_to "Sports", posts_sports_path, class: "nav-item nav-link", id: "header" %>
+      </div>
+    </div>
+  </nav>
+  <center>
+    <% @posts.each do |post| %>
+      <div class="jumbotron">
+          <%= link_to post.title, post_path(post), :id => "mytitle" %>
+          <hr class="my-4">
+          <img class="b-lazy" src= <%=image_path('placeholder.gif')%> data-src=<%= post.img_url %> style="width:100%;">
+      </div>
+    <% end %>
+  </center>
+</body>
