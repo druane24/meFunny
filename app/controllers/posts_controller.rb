@@ -28,6 +28,10 @@ class PostsController < ApplicationController
     @posts = @posts.select { |post| post.category % 13 == 0 }
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   private
 
   def get_posts
