@@ -31,6 +31,6 @@ class PostsController < ApplicationController
   private
 
   def get_posts
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.all.order(id: :desc)
   end
 end

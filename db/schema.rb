@@ -10,15 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170821020739) do
+ActiveRecord::Schema.define(version: 20170822015616) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "img_url"
     t.text "web_url"
     t.integer "category"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
