@@ -5,27 +5,27 @@ class PostsController < ApplicationController
   end
 
   def funny
-    @posts = @posts.select { |post| post.category % 2 == 0 }
+    @posts = @posts.select { |post| post.category.to_i % 2 == 0 }
   end
 
   def awww
-    @posts = @posts.select { |post| post.category % 3 == 0 }
+    @posts = @posts.select { |post| post.category.to_i % 3 == 0 }
   end
 
   def satisfying
-    @posts = @posts.select { |post| post.category % 5 == 0 }
+    @posts = @posts.select { |post| post.category.to_i % 5 == 0 }
   end
 
   def knowledge
-    @posts = @posts.select { |post| post.category % 7 == 0 }
+    @posts = @posts.select { |post| post.category.to_i % 7 == 0 }
   end
 
   def nature
-    @posts = @posts.select { |post| post.category % 11 == 0 }
+    @posts = @posts.select { |post| post.category.to_i % 11 == 0 }
   end
 
   def sports
-    @posts = @posts.select { |post| post.category % 13 == 0 }
+    @posts = @posts.select { |post| post.category.to_i % 13 == 0 }
   end
 
   def show

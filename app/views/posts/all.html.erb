@@ -22,9 +22,13 @@
         <div class="col-xs-1 col-sm-2"></div>
         <div class="col-xs-10 col-md-8">
           <div class="jumbotron">
-              <%= link_to post.title, post_path(post), :id => "mytitle" %>
-              <hr class="my-4">
-              <img class="b-lazy" src= <%=image_path('placeholder.gif')%> data-src=<%= post.img_url %> style="width:100%;">
+            <%= link_to post.title, post_path(post), :id => "mytitle" %>
+            <hr class="my-4">
+            <img class="b-lazy" src= <%=image_path('placeholder.gif')%> data-src=<%= post.img_url %> style="width:100%;">
+            <br>
+            <div align="right">
+              <a data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/"></a>
+            </div>
           </div>
         </div>
         <div class="col-xs-1 col-sm-2"></div>

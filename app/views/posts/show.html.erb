@@ -1,6 +1,6 @@
 <body style="background-color:darkgrey;"">
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: #e3f2fd;">
-    <%= link_to image_tag("logo.png",size: "40x40"), posts_all_path, class: "navbar-brand"  %> 
+    <%= link_to image_tag("logo.png",size: "50x50"), posts_all_path, class: "navbar-brand"  %> 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,23 +25,6 @@
           <hr class="my-4">
           <img src=<%= @post.img_url %> style="width:100%;">
           <br>
-          <div align="left">
-            <!-- Load Facebook SDK for JavaScript -->
-            <div id="fb-root"></div>
-            <script>(function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-
-            <!-- Your share button code -->
-            <div class="fb-share-button" 
-              data-href= <%= request.original_url %>
-              data-layout="button_count">
-            </div>
-          </div>
           <div align="right">
             <a data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/"></a>
           </div>
