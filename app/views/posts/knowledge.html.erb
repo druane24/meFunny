@@ -18,10 +18,16 @@
   </nav>
   <center>
     <% @posts.each do |post| %>
-      <div class="jumbotron">
-          <%= link_to post.title, post_path(post), :id => "mytitle" %>
-          <hr class="my-4">
-          <img class="b-lazy" src= <%=image_path('placeholder.gif')%> data-src=<%= post.img_url %> style="width:100%;">
+      <div class="row">
+        <div class="col-xs-1 col-sm-2"></div>
+        <div class="col-xs-10 col-md-8">
+          <div class="jumbotron">
+              <%= link_to post.title, post_path(post), :id => "mytitle" %>
+              <hr class="my-4">
+              <img class="b-lazy" src= <%=image_path('placeholder.gif')%> data-src=<%= post.img_url %> style="width:100%;">
+          </div>
+        </div>
+        <div class="col-xs-1 col-sm-2"></div>
       </div>
     <% end %>
   </center>
