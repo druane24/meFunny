@@ -1,8 +1,8 @@
 <body style="background-color:darkgrey;"">
   <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded" style="background-color: #e3f2fd;">
-    <%= link_to image_tag("logo.png",size: "100x100"), posts_all_path, class: "navbar-brand"  %> 
+    <%= link_to image_tag("logo.png",size: "50x50"), posts_all_path, class: "navbar-brand"  %>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon ic-4x"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
@@ -18,10 +18,16 @@
   </nav>
   <center>
     <% @posts.each do |post| %>
-      <div class="jumbotron">
-          <%= link_to post.title, post_path(post), :id => "mytitle" %>
-          <hr class="my-4">
-          <img class="b-lazy" src= <%=image_path('placeholder.gif')%> data-src=<%= post.img_url %> style="width:100%;">
+      <div class="row">
+        <div class="col-xs-1 col-sm-2"></div>
+        <div class="col-xs-10 col-md-8">
+          <div class="jumbotron">
+              <%= link_to post.title, post_path(post), :id => "mytitle" %>
+              <hr class="my-4">
+              <img class="b-lazy" src= <%=image_path('placeholder.gif')%> data-src=<%= post.img_url %> style="width:100%;">
+          </div>
+        </div>
+        <div class="col-xs-1 col-sm-2"></div>
       </div>
     <% end %>
   </center>
