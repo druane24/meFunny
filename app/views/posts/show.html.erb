@@ -25,7 +25,7 @@
           <hr class="my-4">
           <img src=<%= @post.img_url %> style="width:100%;">
           <div align='right'>
-            <%= social_share_button_tag(@post.title) %>
+            <%= social_share_button_tag(@post.title, :image => @post.img_url) %>
           </div>
         </div>
       </div>
