@@ -15,6 +15,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'social-share-button'
+
 gem 'bootstrap', '~> 4.0.0.beta'
 
 gem 'sprockets-rails'

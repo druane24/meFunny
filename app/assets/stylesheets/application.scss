@@ -1,6 +1,16 @@
 @import "bootstrap";
+@import "social-share-button";
 
 .ic-4x{font-size: 3.2em;}
+
+$size: 75px;
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
 
 #mytitle {
 	color: black;
