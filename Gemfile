@@ -17,6 +17,8 @@ end
 
 gem 'social-share-button'
 
+gem 'clipboard-rails'
+
 gem 'bootstrap', '~> 4.0.0.beta'
 
 gem 'sprockets-rails'

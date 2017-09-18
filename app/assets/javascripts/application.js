@@ -17,3 +17,11 @@
 //= require popper
 //= require bootstrap
 //= require social-share-button
+//= require clipboard
+
+$(document).ready(function(){  
+  
+  var clipboard = new Clipboard('.clipboard-btn');
+  console.log(clipboard);
+	
+});

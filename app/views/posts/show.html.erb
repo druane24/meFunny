@@ -24,7 +24,13 @@
           <%= link_to @post.title, @post.web_url, :id => "showtitle" %>
           <hr class="my-4">
           <img src=<%= @post.img_url %> style="width:100%;">
-          <div align='right'>
+          <p size="1"> </p>
+          <div align="right">
+            <input id="url" value=<%=request.original_url%> size=35>
+            <button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-text="#url">
+                <%= image_tag("share.png",size: "35x35") %>
+            </button>
+            <p size="1"> </p>
             <%= social_share_button_tag(@post.title, :image => @post.img_url) %>
           </div>
         </div>
